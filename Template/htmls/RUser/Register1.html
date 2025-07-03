@@ -1,0 +1,396 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+{% load static %}
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Register</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  
+<style type="text/css">
+<!--
+.style5 {
+
+	font-size: 30px;
+	background:linear-gradient(to rigt,#7928ca, #d6006c);
+
+  font-size: 2.5rem;
+  font-weight: 800;
+  display: inline-block;
+  background: linear-gradient(to right, #7928ca, #d6006c); /* royal gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  letter-spacing: 0.5px;
+  line-height: 1.4;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+------
+.alert-primary {
+  background: linear-gradient(to right, #8e2de2, #4a00e0);
+  border: none;
+  border-radius: 12px;
+  padding: 15px 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.alert-primary p {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.alert-primary a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0 12px;
+  transition: all 0.3s ease;
+}
+
+.alert-primary a:hover {
+  color: #ffd700;
+  text-shadow: 1px 1px 8px rgba(255, 255, 255, 0.7);
+  transform: scale(1.05);
+}
+
+.alert-primary {
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+------
+.fl {
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  margin-top: 20px;
+  object-fit: cover;
+  
+}
+
+.fl:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+------
+.style12 {font-weight: bold}
+.style13 {font-size: 24px; color: #FF0000; font-weight: bold; }
+.style19 {color: white; font-weight: bold; }
+.style22 {color: white; font-weight: bold; }
+.style23 {
+	color: #FFFFFF;
+	font-weight: bold;
+}
+#registerbox{
+  background-color: #c5dcf5;
+  margin:10px 120px 10px 120px;
+  padding: 5px 10px 5px 10px;
+  border: 3px solid;
+  border-radius: 50px;
+  border-color: #d6006c;
+}
+-----------
+
+ 
+
+  #registerbox table {
+    width: 100%;
+  }
+
+  #registerbox td {
+    padding: 12px;
+    vertical-align: middle;
+  }
+
+  #registerbox input[type="text"],
+  #registerbox input[type="password"],
+  #registerbox input[type="email"],
+  #registerbox input[type="number"],
+  #registerbox textarea,
+  #registerbox select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 2px solid #dcdcdc;
+    border-radius: 10px;
+    font-size: 15px;
+    transition: 0.3s ease-in-out;
+    background: #f9f9f9;
+    outline: none;
+  }
+
+  #registerbox input:focus,
+  #registerbox textarea:focus,
+  #registerbox select:focus {
+    border-color: #7928ca;
+    box-shadow: 0 0 10px rgba(121, 40, 202, 0.4);
+    background: #fff;
+  }
+
+  .style19,
+  .style22 {
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+  }
+
+  #registerbox td[bgcolor="#1E3A8A"] {
+    background: linear-gradient(to right, #1E3A8A, #3B82F6);
+    border-radius: 10px;
+    padding-left: 15px;
+  }
+
+  input[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(to right, #7928ca, #d6006c);
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  input[type="submit"]:hover {
+    background: linear-gradient(to left, #7928ca, #d6006c);
+    box-shadow: 0 0 10px rgba(214, 0, 108, 0.4);
+    transform: scale(1.05);
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 60px;
+  }
+  ---------
+  .status-table {
+        border-collapse: collapse;
+        margin: 10px 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 16px;
+        width: fit-content;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .status-cell {
+        background-color: #8E7DBE;
+        color: #fff;
+        padding: 12px 24px;
+        text-align: center;
+        border-radius: 8px;
+        transition: background-color 0.3s ease;
+    }
+
+    .status-cell:hover {
+        background-color: #7261a9;
+    }
+
+    .status-text {
+        font-weight: bold;
+        letter-spacing: 0.5px;
+    }
+  -----------
+
+
+---------
+
+-->
+</style>
+</head>
+<body>
+<div class="main">
+  <div class="header">
+    <div class="header_resize">
+      <div class="menu_nav">
+        
+      </div>
+      <div class="mainbar">
+        <h1 align="center"><a href="index.html"><span class="content style5">BEYOND KEYWORDS: DETECTING SPAM WITH EMOTIONS AND CONTEXT</span></a></h1>
+
+        <div class="tab-content tab-space">
+            <div class="tab-pane active" id="preview-alerts" style=" background-color: #f8eeb8;
+            border-radius: 40px;">
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+        <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script><link href="https://unpkg.com/soft-ui-design-system@1.0.1/assets/css/soft-design-system.min.css" rel="stylesheet" /><div class="container py-5">
+  <div class="row">
+    <div class="alert alert-primary text-white font-weight-bold" role="alert">
+     <p align="center"><span class="active"><span class="style12"><a href="{% url 'index' %}">Home|  </a><a href="{% url 'login' %}">Remote User </a>|<a href="{% url 'serviceproviderlogin' %}"> Service Provider </a></span></span></p>
+    </div>
+    <div>
+</div>
+
+        <img src="{% static 'spam1.jpg'%}" width="1297" height="327" alt="" class="fl" style="border-radius: 50px;"/>      </div>
+      <div class="clr"></div>
+      <div class="slider">
+        
+      </div>
+      <div class="clr"></div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="content_resize">
+      <div class="mainbar">
+        <div class="article">
+          <h2 align="center" class="style13" style="color: #1E3A8A;">Spam detection, ensemble method, emoji feature, post-comment pair, social media..</h2>
+          <div class="img">
+            <div align="center">
+              <div class="container-fluid">
+		<div>
+		  <div class="row">
+				<div >
+ 					<form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+                            <p>{% load static %}
+				              <img src="{% static '/reg.jpg' %}" alt="My image"width=350><br>
+					          <span class="style1 style22" style="color: #8e2de2;">REGISTER YOUR DETAILS HERE !!!</span>      </p>
+                    
+                    <section id="registerbox">
+
+                      <form autocomplete="off">
+                        <table width="719" border="0" align="center">
+                        <tr>
+                          <td width="160" bgcolor="#1E3A8A"><span class="style19">Enter Username </span></td>
+                          <td width="173"><span class="form-group">
+                            <input type="text" name="username" id="username"  placeholder="User Name" required="required" required minlength="3" maxlength="20" pattern="[A-Za-z0-9_]{4,20}" title="Username must be 4-20 characters, letters/numbers/underscores only."/>
+                          </span></td>
+                          <td width="147" bgcolor="#1E3A8A"><span class="style22">Enter Password </span></td>
+                          <td width="211"><span class="form-group">
+                            <input type="password" name="password" id="password"  placeholder="Password" required="required" autocomplete="off"  required minlength="8" 
+pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+title="Must be at least 8 characters with 1 uppercase, 1 lowercase, and 1 number."/>
+                          </span></td>
+                        </tr>
+                        <tr>
+                          <td height="47" bgcolor="#1E3A8A"><span class="style19">Enter EMail Id </span></td>
+                          <td><span class="form-group">
+                            <input type="email" name="email" id="email"  placeholder="Enter Email " required="required"  />
+                          </span></td>
+                          <td bgcolor="#1E3A8A"><span class="style22">Enter Address </span></td>
+                          <td><span class="form-group">
+                            <textarea name="address" placeholder="Enter Address " autocomplete="off" required minlength="10" maxlength="100"
+                            title="Address should be between 10 to 100 characters."></textarea>
+                          </span></td>
+                        </tr>
+                        <tr>
+                          <td height="37" bgcolor="#1E3A8A"><span class="style19">Enter Gender </span></td>
+                          <td><select name="gender">
+						  <option>----Select Gender ----</option>
+						  <option>Male</option>
+						  <option>Female</option>
+                          </select>
+                          </td>
+                          <td bgcolor="#1E3A8A"><span class="style22">Enter Mobile Number </span></td>
+                          <td><span class="form-group">
+                            <input type="tel" name="phoneno" id="phoneno"  placeholder="Enter Mobile Number" required="required" required pattern="[6-9][0-9]{9}" 
+                            title="Enter a valid 10-digit Indian mobile number starting with 6-9" />
+                          </span></td>
+                        </tr>
+                        <tr>
+                          <td bgcolor="#1E3A8A"><span class="style19">Enter Country Name </span></td>
+                          <td><span class="form-group">
+                            <input type="text" name="country" id="country"  placeholder="Enter Country Name" required="required" required pattern="[A-Za-z ]+" 
+                            title="Only alphabets allowed"/>
+                          </span></td>
+                          <td bgcolor="#1E3A8A"><span class="style22">Enter State Name </span></td>
+                          <td><span class="form-group">
+                            <input type="text" name="state" id="state"  placeholder="Enter State Name" required="required"required pattern="[A-Za-z ]+" 
+                            title="Only alphabets allowed" />
+                          </span></td>
+                        </tr>
+                        <tr>
+                          <td bgcolor="#1E3A8A"><span class="style19">Enter City Name </span></td>
+                          <td><span class="form-group">
+                            <input type="text" name="city" id="city"  placeholder="Enter City Name" required="required"  required pattern="[A-Za-z ]+" 
+                            title="Only alphabets allowed"/>
+                          </span></td>
+                          
+						  
+                          <td><input type="submit" class="btn btn-lg btn-primary" name="submit"  value="Register" style="background:linear-gradient(to right,#7928ca, #d6006c);" /></td>
+                        </tr>
+                      </table>
+                    </form>
+                      
+					  </fieldset>
+						<div><br>
+						  <button class="btn btn-lg ">
+ 					</form>
+					
+		    </div>
+					
+		  </div>
+    
+    </section>
+		<table class="status-table" align="left">
+      <tr>
+          <td class="status-cell">
+              <span class="status-text">Registered Status</span> :: {{object}}
+          </td>
+      </tr>
+  </table>
+
+<div class="mainbar">
+        
+
+        <div class="tab-content tab-space">
+            <div class="tab-pane active" id="preview-alerts">
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+        <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script><link href="https://unpkg.com/soft-ui-design-system@1.0.1/assets/css/soft-design-system.min.css" rel="stylesheet" /><div class="container py-5">
+  <div class="row">
+    <div class="alert alert-primary text-white font-weight-bold" role="alert">
+     <p align="center"><span class="active"><span class="style12"><a href="{% url 'login' %}">Home|  </a><a href="{% url 'login' %}">Remote User </a>|<a href="{% url 'serviceproviderlogin' %}"> Service Provider </a></span></span></p>
+    </div>
+    <div>
+</div>
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+
+				<div class="col-md-5">				</div>
+			</div>
+		</div>
+
+	</div>
+            </div>
+          </div>
+          <div class="clr"></div>
+        </div>
+      </div>
+      <div class="sidebar">
+        <div class="searchform"></div>
+        <div class="clr"></div>
+      </div>
+      <div class="clr"></div>
+    </div>
+  </div>
+  <div class="fbg"></div>
+  <div class="footer"></div>
+</div>
+<div align=center></div>
+</body>
+</html>

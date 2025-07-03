@@ -1,0 +1,154 @@
+{% extends 'RUser/Header.html' %}
+{% block userblock %}
+
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+
+
+		<style>
+			body {background-color:#000000;}
+			.container-fluid {padding:50px;}
+			.container{background-color:white;padding:50px;   }
+			#title{font-family: 'Fredoka One', cursive;
+}
+			.text-uppercase{
+			font-family: 'Righteous', cursive;
+
+			}
+			.tweettext{
+
+    border: 2px solid yellowgreen;
+    width: 904px;
+    height: 202px;
+    overflow: scroll;
+    background-color:;
+}
+		.style1 {
+	color: #FF0000;
+	font-weight: bold;
+}
+.style4 {color: #FFFF00; font-weight: bold; }
+.style6 {
+	font-size: 24px;
+	color: #FFFF00;
+	font-weight: bold;
+}
+        .style7 {color: #FFFFFF}
+
+        #pbut{
+          
+  color: #F9FAFB;
+  background:linear-gradient(to right,#7928ca, #d6006c);
+  padding: 10px;
+  margin:5px;
+  border-radius: 20px;
+  
+  }
+#pbut:hover{
+  background:linear-gradient(to left,#7928ca, #d6006c);
+  color:#F9FAFB ;
+  
+}
+        
+        </style>
+
+	<body>
+	<div class="container-fluid">
+		<div class="container" style=" border-radius: 40px;">
+
+			<div class="row">
+				<div class="col-md-5">
+
+                   <form role="form" method="POST" >
+						{% csrf_token %}
+            
+						<fieldset>
+            
+							<p class="text-uppercase pull-center style1" style="font-size: 25px;">PREDICTION OF SPAM COMMENT DETECTION TYPE </p>
+                            
+                          
+                                
+                                {% csrf_token %}
+                                <table width="992" align="center">
+                                  <tr>
+                                    <td height="44" colspan="4" bgcolor="#D3CA79"><div align="center" class="style4" style="color: #FFFFFF; background:linear-gradient(to right,#10B981,#1E3A8A)">ENTER DATASETS DETAILS HERE !!! </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td width="289" height="44" bgcolor=""><div align="center" class="style4" style="color: #FFFFFF; background:linear-gradient(to right,#10B981,#1E3A8A)">Enter COMMENT_ID</div></td>
+                                    <td width="200"><input type="text" name="COMMENT_ID"></td>
+                                    <td width="340" bgcolor=""><div align="center" class="style4" style="color: #FFFFFF; background:linear-gradient(to right,#10B981,#1E3A8A)">Enter AUTHOR</div></td>
+                                    <td width="273"><input type="text" name="AUTHOR"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor=""><div align="center" class="style4" style="color: #FFFFFF; background:linear-gradient(to right,#10B981,#1E3A8A)">Enter CDATE</div></td>
+                                    <td><input name="CDATE" type="text"></td>
+                                    <td bgcolor=""><div align="center" class="style4" style="color: #FFFFFF; background:linear-gradient(to right,#10B981,#1E3A8A)">Enter CONTENT_DESC</div></td>
+                                    <td><textarea name="CONTENT_DESC"></textarea></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="">&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td bgcolor="#FFFFFF"><div align="center" class="style4"></div></td>
+                                    <td><input name="submit" type="submit"  value="Predict" id="pbut"></td>
+                                  </tr>
+                                </table>
+					 </fieldset>
+				  </form>
+
+
+ 					<form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+
+                            
+                            <div>
+                              <table width="844" height="71" border="0" align="center" >
+                                    <tr><td width="632" bgcolor=""><div align="center"><span class="style6" style="color: #FFFFFF; background:linear-gradient(to right,#10B981,#1E3A8A); padding: 10px 5px; border-radius: 30px;">PREDICTED SPAM COMMENT DETECTION TYPE </span> <span class="style7">:: --&gt; </span></div></td>
+
+
+
+                                      <!--<td width="202" bgcolor="#FFFFFF" style="color: #1E3A8A; font-size:20px; font-family:fantasy" ><div align="center"><strong>{{objs}}</strong></div></td>
+                                    -->
+                                    <td width="202" bgcolor="#FFFFFF" style="font-size:20px; font-family:fantasy; font-weight: bold;
+  {% if objs %}
+    color: {% if objs == 'Not Spam' or objs == 'Normal Comment' %}#4CAF50{% else %}#f44336{% endif %};
+  {% else %}
+    color: transparent;
+  {% endif %}
+">
+  <div align="center">
+    {% if objs %}
+      <span style="font-size: 24px;">
+        {% if objs == 'Not Spam' or objs == 'Normal Comment' %}✅{% else %}🚫{% endif %}
+      </span><br>
+      {{objs}}
+    {% endif %}
+  </div>
+</td>
+</tr>
+                      </table>
+
+
+
+                            </div>
+
+
+
+
+						</fieldset>
+					</form>
+				</div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+    <tr>

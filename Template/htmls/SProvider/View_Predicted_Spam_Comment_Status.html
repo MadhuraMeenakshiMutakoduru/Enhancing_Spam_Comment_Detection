@@ -1,0 +1,149 @@
+{% extends 'SProvider/Header.html' %}
+{% block researchblock %}
+
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+
+
+		<style>
+			body {background-color:#000000;}
+			.container-fluid {padding:px; background-color: white;}
+			.container{background-color:;padding:50px;   }
+			#title{font-family: 'Fredoka One', cursive;
+}
+			.text-uppercase{
+			font-family: 'Righteous', cursive;
+
+			}
+			.tweettext{
+
+    border: 2px solid yellowgreen;
+    width: 1104px;
+    height: 442px;
+    overflow: scroll;
+    background-color:;
+}
+		.style1 {
+	color: #1E3A8A;
+	font-weight: bold;
+}
+.style12 {color: #FFFF00; font-weight: bold; }
+--------
+
+
+-------
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    font-family: 'Segoe UI', sans-serif;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+    border: 2px solid white; /* still respecting border="2" */
+}
+
+table tr:first-child td {
+    background-color: peru;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 12px;
+    letter-spacing: 1px;
+}
+
+table td {
+    padding: 14px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+table tr:nth-child(even):not(:first-child) {
+    background-color: #f5f5f5;
+}
+
+table tr:nth-child(odd):not(:first-child) {
+    background-color: #ffffff;
+}
+
+table td[bgcolor="#FFFFFF"] {
+    color: peru !important;
+    font-size: 20px;
+    font-family: 'Georgia', serif;
+}
+
+table td[bgcolor="#FF0000"]:not(:first-child) {
+    background-color: peru;
+    color: #fff !important;
+    font-size: 18px;
+    font-family: 'Courier New', monospace;
+}
+
+span.style7 {
+    color: black !important;
+    font-weight: 600;
+}
+
+------
+        </style>
+
+	<body>
+	<div class="container-fluid" style="border-radius: 40px; margin-top: 10px;">
+		<div class="container" style="padding-left: 35px;">
+
+			<div class="row">
+				<div class="col-md-5">
+ 					<form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset style="border:none; background:linear-gradient(to right,#686dea,#ACD3A8); border-radius: 30px; padding: 15px 30px 30px 30px;">
+							<p class="text-uppercase pull-center style1" style="color:white; font-size: 18px; padding-left: 350px;">View Spam Comment Prediction Type Details  !!! </p>                            
+                            <div class="tweettext">
+                               <table border="5" bordercolor="8F87F1" style="border-radius: 5px;">
+
+
+                                   <tr>
+
+                                       <td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6" style="color: white;">COMMENT_ID</span></div></td>
+<td bgcolor="#FF0000" style="color: white;><div align="center" class="style12"><span class="style8 style6" >AUTHOR</span></div></td>
+<td bgcolor="#FF0000" style="color: white;><div align="center" class="style12"><span class="style8 style6">CDATE</span></div></td>
+<td bgcolor="#FF0000" style="color: white;><div align="center" class="style12"><span class="style8 style6">CONTENT_DESC</span></div></td>
+<td bgcolor="#FF0000" style="color: white;><div align="center" class="style12"><span class="style8 style6">Prediction</span></div></td>
+
+
+                      </tr>
+                            {% for object in list_objects %}
+                      <tr>
+
+                        <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.COMMENT_ID}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.AUTHOR}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.CDATE}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.CONTENT_DESC}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.Prediction}}</td>
+
+
+                        </tr>
+
+                                        {% endfor %}
+                      </table>
+
+                            </div>
+
+
+
+
+						</fieldset>
+					</form>
+				</div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+    <tr>

@@ -1,0 +1,248 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+{% load static %}
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Home Page</title>
+<link rel="icon" href="achievement icon.png" type="image/x-icon">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+
+  <link rel="stylesheet"  type="text/css" href="{% static 'style.css'%} "  />
+<link rel="stylesheet"   type="text/css" href="{% static 'coin-slider.css'%}" />
+
+<script type="text/javascript" src="{% static 'cufon-yui.js'%} "></script>
+<script type="text/javascript" src="{% static 'cufon-aller.js'%}"></script>
+<script type="text/javascript" src="{% static 'jquery-1.4.2.min.js'%}"></script>
+<script type="text/javascript" src="{% static 'script.js'%}"></script>
+<script type="text/javascript" src="{% static 'coin-slider.min.js'%}"></script>
+<style type="text/css">
+<!--
+.style5 {
+	font-size: 30px;
+	color: #1E3A8A;
+}
+
+.style5 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  display: inline-block;
+  background: linear-gradient(to right, #7928ca, #d6006c); /* gradient text */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 0.5px;
+  line-height: 1.4;
+  animation: fadeIn 1.5s ease-in-out;
+  text-shadow: 2px 2px 8px rgba(121, 40, 202, 0.3);
+  transition: all 0.3s ease-in-out;
+
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.style5:hover{
+  
+}
+
+----
+.style12 {
+  font-weight: bold}
+.style12 a{
+  color: white;
+}
+.style13 {font-size: 24px; color: #1E3A8A; font-weight: bold; }
+.style17 {
+	color: #1E3A8A;
+	font-weight: bold;
+}
+#postcon{
+  background-color: #E5E7EB;
+  margin:30px 50px 0px 50px;
+  padding: 5px;
+  border-radius: 5px;
+}
+---
+
+.alert-primary {
+  background: linear-gradient(to right, #7928ca, #d6006c);
+  border: none;
+  border-radius: 12px;
+  padding: 15px 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.alert-primary p {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.alert-primary a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0 12px;
+  transition: all 0.3s ease;
+}
+
+.alert-primary a:hover {
+  color: #ffd700;
+  text-shadow: 1px 1px 8px rgba(255, 255, 255, 0.7);
+  transform: scale(1.05);
+}
+
+.alert-primary {
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+----
+.fl {
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  margin-top: 20px;
+  object-fit: cover;
+  
+}
+
+.fl:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+----
+.post_content {
+  background: #f8f9fa; /* subtle gray background */
+  padding: 2rem;
+  margin: 2rem auto;
+  border-radius: 1rem;
+  max-width: 900px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.post_content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 25px rgba(138, 19, 230, 0.15);
+}
+
+#postcon p {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: justify;
+  transition: color 0.3s ease-in-out;
+}
+
+#postcon p:hover {
+  color: #0056b3; /* gives an interactive feel */
+}
+
+.style17 {
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  
+}
+.tab-pane{
+  background-color: #f8eeb8;
+  border-radius: 40px;
+ 
+}
+
+
+-->
+</style>
+</head>
+<body>
+<div class="main">
+  <div class="header">
+    <div class="header_resize">
+      <div class="menu_nav">
+        <p>&nbsp;</p>
+      </div>
+      <div class="mainbar">
+        <h1 align="center"><a href="index.html"><span class="content style5">BEYOND KEYWORDS: DETECTING SPAM WITH EMOTIONS AND CONTEXT</span></a></h1>
+
+
+
+        <div class="tab-content tab-space" style="background-color: #c5dcf5; border-radius: 50px;" >
+            <div class="tab-pane active" id="preview-alerts">
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+        <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script><link href="https://unpkg.com/soft-ui-design-system@1.0.1/assets/css/soft-design-system.min.css" rel="stylesheet" /><div class="container py-5">
+  <div class="row">
+    <div class="alert alert-primary text-white font-weight-bold" role="alert" style="background-color: #7928ca;">
+     <p align="center"><span class="active"><span class="style12"><a href="{% url 'index' %}">Home|  </a><a href="{% url 'login' %}">Remote User </a>|<a href="{% url 'serviceproviderlogin' %}"> Service Provider </a></span></span></p>
+    </div>
+    <div>
+</div>
+
+
+
+        <img src="{% static 'spam1.jpg'%}" width="1297" height="280" alt="" class="fl" style="border-radius: 50px; "/>      </div>
+      <div class="clr"></div>
+      <div class="slider">
+        
+      </div>
+      <div class="clr"></div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="content_resize">
+      <div class="mainbar">
+        <div class="article">
+          <h2 align="center" class="style13">Spam detection, ensemble method, emoji feature, post-comment pair, social media..</h2>
+          <div class="img">
+            <div align="center"><img src="{% static 'spam2.jpg'%}" width="630" height="221" alt="" class="fl" style="border-radius: 50px; " /></div>
+          </div>
+          <div class="post_content"><section id="postcon">
+            <p align="center" class="style17">Every time a well-known public figure posts something on social media, it encourages many users to comment. Unfortunately, not all comments are relevant to the post. Some are spam comments which can disrupt the overall flow of information. This research employed two strategies to address issues in text spam detection on social media. The first strategy was utilizing emojis that had been frequently discarded in many studies. In fact, many social media users use emojis to convey their intentions. The second strategy was utilizing stacked post-comment pairs, which was different from many spam detection systems that solely focused on comment-only data. The post-comment pairs were required to detect whether a comment was relevant (not spam) or spam irrelevant to the post context. This research used the SpamID-Pair dataset derived from social media for Indonesian spam comment detection. After a comprehensive investigation, the emoji-text feature, the stacked post-comment pairs, and ensemble voting could boost detection performance (in terms of accuracy and F1). Adding manual features also improved detection performance. Based on theexperiment, the best stand-alone methods for spam comment detection are the SVM (RBF kernel) and the soft voting ensemble method for the best average performance...</p>
+          </section></div>
+
+        <div class="tab-content tab-space">
+            <div class="tab-pane active" id="preview-alerts">
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+        <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script><link href="https://unpkg.com/soft-ui-design-system@1.0.1/assets/css/soft-design-system.min.css" rel="stylesheet" /><div class="container py-5">
+  <div class="row">
+    <div class="alert alert-primary text-white font-weight-bold" role="alert">
+     <p align="center"><span class="active"><span class="style12"><a href="{% url 'login' %}">Home|  </a><a href="{% url 'login' %}">Remote User </a>|<a href="{% url 'serviceproviderlogin' %}"> Service Provider </a></span></span></p>
+    </div>
+    <div>
+</div>
+          <div class="clr"></div>
+        </div>
+      </div>
+      <div class="sidebar">
+        <div class="searchform"></div>
+        <div class="clr"></div>
+      </div>
+      <div class="clr"></div>
+    </div>
+  </div>
+  <div class="fbg"></div>
+  <div class="footer"></div>
+</div>
+<div align=center></div>
+</body>
+</html>
